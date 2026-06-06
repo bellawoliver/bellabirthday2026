@@ -5,18 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Wishlist</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="wishlist-config.js" defer></script>
+    <script src="wishlist.js" defer></script>
   </head>
-  <body>
-    <main class="page-shell">
-      <section class="content-panel">
-        <p class="eyebrow">Wishlist</p>
-        <h1>Bella's Wishlist</h1>
-        <ul class="wishlist">
-          <li>A birthday adventure</li>
-          <li>Something cozy</li>
-          <li>A sweet surprise</li>
-        </ul>
-        <a class="secondary-button" href="index.html">Back Home</a>
+  <body class="wishlist-page">
+    <header class="wishlist-header">
+      <div class="wishlist-header-content">
+        <a class="wishlist-logo" href="index.html" aria-label="Back to home">
+          <img src="assets/wishlist-logo.png" alt="Bella's Birthday Wishlist">
+        </a>
+        <nav class="wishlist-nav" aria-label="Wishlist categories">
+          <a href="#apartment">apartment</a>
+          <a href="#puppy">puppy</a>
+          <a href="#misc">misc.</a>
+        </nav>
+      </div>
+      <svg class="wishlist-header-wave" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 13 C48 26 96 26 144 13 C192 0 240 0 288 13 C336 26 384 26 432 13 C480 0 528 0 576 13 C624 26 672 26 720 13 C768 0 816 0 864 13 C912 26 960 26 1008 13 C1056 0 1104 0 1152 13 C1200 26 1248 26 1296 13 C1344 0 1392 0 1440 13 V46 H0 Z"></path>
+      </svg>
+    </header>
+
+    <main class="wishlist-page-shell">
+      <section class="wishlist-hero" aria-labelledby="wishlist-title">
+        <h1 id="wishlist-title">select one of the categories in the navigation bar or keep scrolling to see all!</h1>
+        <p aria-hidden="true">&darr;</p>
+      </section>
+
+      <section class="wishlist-section" id="apartment" aria-labelledby="apartment-title">
+        <h2 id="apartment-title">apartment</h2>
+        <div class="wishlist-list" data-category-list="apartment"></div>
+      </section>
+
+      <section class="wishlist-section" id="puppy" aria-labelledby="puppy-title">
+        <h2 id="puppy-title">puppy</h2>
+        <div class="wishlist-list" data-category-list="puppy"></div>
+      </section>
+
+      <section class="wishlist-section empty-section" id="misc" aria-labelledby="misc-title">
+        <h2 id="misc-title">misc.</h2>
+        <div class="wishlist-list" data-category-list="misc"></div>
       </section>
     </main>
   </body>
